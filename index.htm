@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
-    <title>web belom jadi</title>
+    <title>ahmad service</title>
 </head>
 
 <body>
@@ -249,9 +249,12 @@
 
     <!-- untuk menutup header -->
     <script>
-        function tutup() {
-            const tutupHeader = document.querySelector('.nav-content');
-            tutupHeader.classList.toggle('closed');
+        function tutup(){
+            const tutupNav = document.querySelector('.nav-content');
+            tutupNav.classList.toggle('closed');
+
+            const buttonNav = document.querySelector('#toggleNav');
+            buttonNav.classList.toggle('closed');
         }
     </script>
 </body>
