@@ -122,11 +122,6 @@ header .nav-content {
 }
 
 #toggleNav:hover.closed {
-    transform: rotate(0deg);
-}
-
-#toggleNav:hover {
-    background-color: #081818;
     transform: rotate(180deg);
 }
 
