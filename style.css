@@ -117,11 +117,20 @@ header .nav-content {
     transition: .6s ease;
 }
 
+<<<<<<< HEAD
 #toggleNav.closed:hover{
     transform: rotate(0deg);
 }
 
 #toggleNav:hover.closed {
+=======
+#toggleNav.closed{
+    transform: rotate(0deg);
+}
+
+#toggleNav:hover {
+    background-color: #081818;
+>>>>>>> b1aa534719447314cbac1234c082b31b74d22313
     transform: rotate(180deg);
 }
 
