@@ -143,20 +143,20 @@ header .nav-content {
     transition: .6s ease;
 }
 
-.nav-content a:focus {
+.nav-content a:hover {
     transform: translateY(-30px);
     background-color: #081818;
 }
 
-.nav-content #home:focus {
+.nav-content #home:hover {
     color: #00ff00;
 }
 
-.nav-content #about:focus {
+.nav-content #about:hover {
     color: #fbff00;
 }
 
-.nav-content #pesan:focus {
+.nav-content #pesan:hover {
     color: #00aeff;
 }
 
