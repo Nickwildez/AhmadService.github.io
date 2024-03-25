@@ -117,11 +117,11 @@ header .nav-content {
     transition: .6s ease;
 }
 
-#toggleNav.closed:hover{
+#toggleNav.closed:focus{
     transform: rotate(0deg);
 }
 
-#toggleNav:hover.closed {
+#toggleNav:focus.closed {
     transform: rotate(180deg);
 }
 
@@ -143,20 +143,20 @@ header .nav-content {
     transition: .6s ease;
 }
 
-.nav-content a:hover {
+.nav-content a:focus {
     transform: translateY(-30px);
     background-color: #081818;
 }
 
-.nav-content #home:hover {
+.nav-content #home:focus {
     color: #00ff00;
 }
 
-.nav-content #about:hover {
+.nav-content #about:focus {
     color: #fbff00;
 }
 
-.nav-content #pesan:hover {
+.nav-content #pesan:focus {
     color: #00aeff;
 }
 
