@@ -101,23 +101,23 @@ header .nav-content {
     font-size: 2rem;
     position: absolute;
     top: -90px;
-    left: 300px;
-    width: 60px;
-    height: 60px;
-    line-height: 60px;
+    left: 80%;
+    width: 70px;
+    height: 70px;
+    line-height: 70px;
     border: none;
     border-radius: 50%;
     text-align: center;
     z-index: 1;
     overflow: hidden;
-    background-color: #186b6b;
+    background-color: #081818;
     outline: none !important;
     display: block;
     cursor: pointer;
     transition: .6s ease;
 }
 
-#toggleNav.closed:focus{
+#toggleNav.closed:focus {
     transform: rotate(0deg);
 }
 
@@ -163,7 +163,8 @@ header .nav-content {
 .wave-up {
     width: 100%;
     position: relative;
-    top: -25vh;
+    top: 0;
+    transform: translateY(-30vh);
     display: block;
 }
 
@@ -491,7 +492,7 @@ header .nav-content {
     list-style-type: square;
 }
 
-.box-content-card .btn{
+.box-content-card .btn {
     width: 100%;
     display: grid;
     position: relative;
@@ -516,7 +517,7 @@ header .nav-content {
     z-index: 1;
 }
 
-.box-content-card a::after{
+.box-content-card a::after {
     position: absolute;
     z-index: -1;
     content: "";
@@ -532,12 +533,12 @@ header .nav-content {
     width: 100%;
 }
 
-.box-content-card a:active{
+.box-content-card a:active {
     background: #003c8b;
 }
 
 
-footer{
+footer {
     background-color: #006eff;
     position: relative;
     display: grid;
@@ -551,18 +552,18 @@ footer{
     background-size: cover;
 }
 
-.footer-content{
+.footer-content {
     background-color: #ffffff;
     display: grid;
     align-items: center;
     border: none;
-    border-radius: 10px 10px 0 0 ;
+    border-radius: 10px 10px 0 0;
     box-shadow: 0 0 8px 2px black;
     padding: 10px;
     position: relative;
 }
 
-.judul-footer{
+.judul-footer {
     width: 100%;
     position: relative;
     display: block;
@@ -570,7 +571,7 @@ footer{
     text-align: center;
 }
 
-.judul-footer h2{
+.judul-footer h2 {
     text-align: center;
     font-size: 2rem;
     color: black;
@@ -578,7 +579,7 @@ footer{
     border: none;
 }
 
-.isi-footer{
+.isi-footer {
     width: 100%;
     text-align: center;
     display: flex;
@@ -589,7 +590,7 @@ footer{
     border: none;
 }
 
-.isi-footer a{
+.isi-footer a {
     color: white;
     background: #081818;
     font-size: 2.3rem;
@@ -604,15 +605,15 @@ footer{
     line-height: 70px;
     width: 70px;
     height: 70px;
-    transition:  0.6s ease;
+    transition: 0.6s ease;
 }
 
-.isi-footer a:hover{
+.isi-footer a:hover {
     transform: translateY(-10px);
     color: white;
 }
 
-.isi-footer #whatsapp::after{
+.isi-footer #whatsapp::after {
     content: "";
     z-index: -1;
     top: 100%;
@@ -624,11 +625,11 @@ footer{
     background-color: #00f100;
 }
 
-.isi-footer #whatsapp:hover::after{
+.isi-footer #whatsapp:hover::after {
     top: 0;
 }
 
-.isi-footer #email::after{
+.isi-footer #email::after {
     content: "";
     z-index: -1;
     top: -100%;
@@ -640,11 +641,11 @@ footer{
     background-color: #0099ff;
 }
 
-.isi-footer #email:hover::after{
+.isi-footer #email:hover::after {
     top: 0;
 }
 
-.isi-footer #maps::after{
+.isi-footer #maps::after {
     content: "";
     z-index: -1;
     top: 100%;
@@ -656,11 +657,11 @@ footer{
     background-color: #ff0000;
 }
 
-.isi-footer #maps:hover::after{
+.isi-footer #maps:hover::after {
     top: 0;
 }
 
-.dev{
+.dev {
     display: inline-block;
     width: 100%;
     text-align: center;
@@ -668,13 +669,13 @@ footer{
     padding: 10px;
 }
 
-.content-dev{
+.content-dev {
     display: inline-block;
-    position: relative;    
+    position: relative;
     text-align: center;
 }
 
-.dev p{
+.dev p {
     width: 100%;
     position: relative;
     font-weight: 500;
@@ -682,7 +683,7 @@ footer{
     font-size: 1.2rem;
 }
 
-.dev .namadev{
+.dev .namadev {
     width: 100%;
     position: relative;
     border-right: 2px solid white;
