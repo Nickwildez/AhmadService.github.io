@@ -163,8 +163,7 @@ header .nav-content {
 .wave-up {
     width: 100%;
     position: relative;
-    top: 0;
-    transform: translateY(-30vh);
+    top: -26vh;
     display: block;
 }
 
