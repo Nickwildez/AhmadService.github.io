@@ -221,7 +221,7 @@ header .nav-content {
 .wave-up {
     width: 100%;
     position: relative;
-    top: -18vh;
+    top: -20vh;
     display: block;
 }
 
@@ -229,7 +229,7 @@ header .nav-content {
     width: 100%;
     position: relative;
     background-color: transparent;
-    top: 18vh;
+    top: 20vh;
     display: block;
 }
 
