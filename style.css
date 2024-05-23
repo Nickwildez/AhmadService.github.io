@@ -38,12 +38,31 @@ header {
     left: 0;
     width: 100%;
     flex-wrap: wrap;
-    display: grid;
+    display: none;
     position: fixed;
     text-align: center;
     z-index: 9999;
     color: white;
     bottom: 0;
+    animation-duration: .6s;
+    animation-fill-mode: forwards;
+}
+
+header.visible {
+    display: grid;
+    animation-name: openHeader;
+}
+
+@keyframes openHeader {
+    0% {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 header .nav-content {
@@ -57,8 +76,9 @@ header .nav-content {
     list-style: none;
     text-decoration: none;
     background-color: #081818;
+    box-shadow: 0 -5px 5px 0 black;
     text-align: center;
-    padding: 10px;
+    padding: 5px;
     height: 100%;
     width: 100%;
 }
@@ -102,17 +122,20 @@ header .nav-content {
     position: absolute;
     top: -90px;
     left: 80%;
-    width: 70px;
-    height: 70px;
-    line-height: 70px;
+    width: 65px;
+    height: 65px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border: none;
     border-radius: 50%;
     text-align: center;
     z-index: 1;
     overflow: hidden;
+    text-shadow: 0 0 5px white;
+    box-shadow: 0 0 8px 1px black;
     background-color: #081818;
     outline: none !important;
-    display: block;
     cursor: pointer;
     transition: .6s ease;
 }
@@ -127,49 +150,274 @@ header .nav-content {
 
 .nav-content a {
     color: white;
+    text-shadow: 0 0 5px white;
     font-size: 2rem;
     position: relative;
-    width: 70px;
-    height: 70px;
-    line-height: 70px;
+    width: 65px;
+    height: 65px;
     border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
     z-index: 1;
     overflow: hidden;
     background-color: transparent;
     outline: none !important;
-    display: block;
     cursor: pointer;
     transition: .6s ease;
 }
 
-.nav-content a:hover {
+.nav-content a:hover,
+.nav-content a.active {
     transform: translateY(-30px);
     background-color: #081818;
+    box-shadow: 0 0 8px 1px black;
 }
 
-.nav-content #home:hover {
+.nav-content #home:hover,
+.nav-content #home.active {
     color: #00ff00;
 }
 
-.nav-content #about:hover {
+.nav-content #about:hover,
+.nav-content #about.active {
     color: #fbff00;
 }
 
-.nav-content #pesan:hover {
+.nav-content #pesan:hover,
+.nav-content #pesan.active {
     color: #00aeff;
+}
+
+#callDev {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    color: white;
+    text-shadow: 0 0 5px white;
+    font-size: 2rem;
+    width: 65px;
+    height: 65px;
+    border: none;
+    border-radius: 50%;
+    background-color: transparent;
+    z-index: 2;
+    outline: none !important;
+    overflow: hidden;
+    cursor: pointer;
+    transition: .6s ease;
+}
+
+#callDev:hover {
+    color: red;
+    transform: translateY(-30px);
+    background-color: #081818;
+    box-shadow: 0 0 8px 1px black;
 }
 
 .wave-up {
     width: 100%;
     position: relative;
-    top: -26vh;
+    top: -18vh;
     display: block;
+}
+
+.wave-bawah{
+    width: 100%;
+    position: relative;
+    background-color: transparent;
+    top: 18vh;
+    display: block;
+}
+
+.sec-callDev {
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+    min-height: 100vh;
+    display: none;
+    border: none;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    text-align: center;
+    background-size: cover;
+    background-color: #003c8b;
+    background-position: center;
+    background-repeat: no-repeat;
+    animation-duration: .6s;
+    animation-fill-mode: forwards;
+}
+
+.sec-callDev.opencallDEV {
+    display: grid;
+    animation-name: showCallDev;
+}
+
+@keyframes showCallDev {
+    0% {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.content-callDev {
+    display: grid;
+    width: 100%;
+    position: relative;
+    text-align: center;
+    border: none;
+    padding: 10px;
+}
+
+.box-callDev {
+    display: grid;
+    width: 100%;
+    border: none;
+    position: relative;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 0 8px 1px black;
+    background-color: white;
+    padding: 10px;
+}
+
+.h2-callDev {
+    display: grid;
+    width: 100%;
+    position: relative;
+    border: none;
+    text-align: center;
+}
+
+#closeCallDev{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 45px;
+    height: 45px;
+    left: 90%;
+    top: -100%;
+    position: absolute;
+    border: none;
+    border-radius: 50%;
+    color: white;
+    background-color: red;
+    text-shadow: 0 0 5px white;
+    box-shadow: 0 0 8px 1px black;
+    font-size: 2rem;
+}
+
+.h2-callDev h2 {
+    font-size: 2rem;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    position: relative;
+}
+
+.a-callDev {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+    border: none;
+    position: relative;
+    padding: 10px;
+}
+
+.a-callDev a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 65px;
+    height: 65px;
+    color: white;
+    text-shadow: 0 0 5px white;
+    box-shadow: 0 0 8px 1px black;
+    background-color: #00aeff;
+    border-radius: 50%;
+    font-size: 2.5rem;
+    z-index: 1;
+    position: relative;
+    border: 2px solid black;
+    outline: none !important;
+    overflow: hidden;
+    transition: .6s ease;
+}
+
+.a-callDev a:hover {
+    transform: translateY(-10px);
+    transform: scale(1.1)
+}
+
+.a-callDev #whatsapp::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 100%;
+    height: 100%;
+    width: 100%;
+    color: white;
+    background-color: #00ff00;
+    left: 0;
+    transition: .6s ease;
+}
+
+.a-callDev #whatsapp:hover::after {
+    top: 0;
+}
+
+.a-callDev #email::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    height: 100%;
+    width: 0;
+    color: white;
+    left: 0;
+    transition: .6s ease;
+    background-color: blue;
+}
+
+.a-callDev #email:hover::after {
+    width: 100%;
+}
+
+.a-callDev #maps::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 100%;
+    height: 100%;
+    width: 100%;
+    color: white;
+    background-color: red;
+    left: 0;
+    transition: .6s ease;
+}
+
+.a-callDev #maps:hover::after {
+    top: 0;
 }
 
 .home {
     width: 100%;
     display: grid;
+    justify-content: center;
     align-items: center;
     background-position: center;
     background-repeat: no-repeat;
@@ -177,12 +425,24 @@ header .nav-content {
     min-height: 100vh;
     position: relative;
     text-align: center;
+    border: none;
+}
+
+.home::before {
+    content: "";
+    position: absolute;
+    background-color: #00000077;
+    display: grid;
+    width: 100%;
+    min-height: 100vh;
+    top: 0;
 }
 
 .home-content {
     background-color: transparent;
     text-align: center;
     width: 100%;
+    display: grid;
     color: white;
     z-index: 2;
     position: relative;
@@ -201,6 +461,7 @@ header .nav-content {
 .h2-home {
     display: inline-block;
     position: relative;
+    border: none;
 }
 
 .h2-home h2 {
@@ -208,6 +469,7 @@ header .nav-content {
     font-size: 2.2rem;
     display: block;
     position: relative;
+    text-shadow: 0 0 8px black;
     white-space: nowrap;
     border-right: 2px solid white;
     width: 100%;
@@ -226,6 +488,7 @@ header .nav-content {
     font-weight: bold;
     font-size: 2.2rem;
     display: block;
+    text-shadow: 0 0 8px black;
     position: relative;
     white-space: nowrap;
     border-right: 2px solid white;
@@ -259,6 +522,7 @@ header .nav-content {
     border-right: 2px solid white;
     text-align: center;
     overflow: hidden;
+    text-shadow: 0 0 8px black;
     display: block;
     width: 100%;
     position: relative;
@@ -280,6 +544,7 @@ header .nav-content {
     font-size: 2rem;
     border: 3px solid #fbff00;
     box-shadow: 0 4px 8px 2px black;
+    text-shadow: 0 0 8px black;
     border-radius: 10px;
     text-align: center;
     color: #ffffff;
@@ -288,6 +553,11 @@ header .nav-content {
     z-index: 1;
     position: relative;
     transition: .6s ease !important;
+}
+
+.button-to-down a:hover {
+    border: 3px solid black;
+    box-shadow: 0 4px 8px 2px white;
 }
 
 .button-to-down a::after {
@@ -307,10 +577,11 @@ header .nav-content {
 }
 
 .about {
-    display: grid;
+    display: none;
+    justify-content: center;
     align-items: center;
     width: 100%;
-    min-height: 100vh;
+    min-height: 110vh;
     border: none;
     color: black;
     position: relative;
@@ -318,6 +589,25 @@ header .nav-content {
     background-size: cover;
     background-repeat: no-repeat;
     background: transparent;
+    animation-duration: .6s;
+    animation-fill-mode: forwards;
+}
+
+.about.openContent {
+    display: grid;
+    animation-name: bukacontent;
+}
+
+@keyframes bukacontent {
+    0% {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .about-content {
@@ -359,6 +649,7 @@ header .nav-content {
     background-position: center;
     background-repeat: no-repeat;
     border-radius: 10px;
+    text-shadow: 0 5px 5px black;
     box-shadow: 0 0 10px 3px black;
 }
 
@@ -419,7 +710,7 @@ header .nav-content {
 }
 
 .card {
-    display: grid;
+    display: none;
     align-items: center;
     width: 100%;
     min-height: 100vh;
@@ -428,6 +719,13 @@ header .nav-content {
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    animation-duration: .6s;
+    animation-fill-mode: forwards;
+}
+
+.card.openContent {
+    display: grid;
+    animation-name: bukacontent;
 }
 
 .card-content {
@@ -496,10 +794,15 @@ header .nav-content {
     display: grid;
     position: relative;
     justify-content: end;
+    border: none;
 }
 
-.box-content-card a {
-    display: block;
+.box-content-card .btn a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-shadow: 0 0 5px black;
+    box-shadow: 0 0 8px 1px black;
     background-color: #006eff;
     border: none;
     position: relative;
@@ -507,6 +810,7 @@ header .nav-content {
     text-align: center;
     cursor: pointer;
     color: white;
+    font-weight: 500;
     font-size: 1.5rem;
     padding: 10px;
     width: 200px;
@@ -516,7 +820,7 @@ header .nav-content {
     z-index: 1;
 }
 
-.box-content-card a::after {
+.box-content-card .btn a::after {
     position: absolute;
     z-index: -1;
     content: "";
@@ -528,19 +832,18 @@ header .nav-content {
     transition: 1s ease;
 }
 
-.box-content-card a:hover::after {
+.box-content-card .btn a:hover::after {
     width: 100%;
 }
 
-.box-content-card a:active {
+.box-content-card .btn a:active {
     background: #003c8b;
 }
-
 
 footer {
     background-color: #006eff;
     position: relative;
-    display: grid;
+    display: none;
     align-items: center;
     width: 100%;
     min-height: 20vh;
@@ -549,6 +852,11 @@ footer {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+footer.openContent {
+    display: grid;
+    animation-name: bukacontent;
 }
 
 .footer-content {
@@ -578,30 +886,22 @@ footer {
     border: none;
 }
 
-.isi-footer {
-    width: 100%;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    position: relative;
-    padding: 10px;
-    border: none;
-}
-
 .isi-footer a {
     color: white;
     background: #081818;
     font-size: 2.3rem;
     text-align: center;
     cursor: pointer;
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: relative;
+    box-shadow: 0 0 5px 1px black;
+    text-shadow: 0 0 5px black;
     overflow: hidden;
     outline: none !important;
     z-index: 1;
     border-radius: 50%;
-    line-height: 70px;
     width: 70px;
     height: 70px;
     transition: 0.6s ease;
@@ -609,55 +909,8 @@ footer {
 
 .isi-footer a:hover {
     transform: translateY(-10px);
+    transform: scale(1.1);
     color: white;
-}
-
-.isi-footer #whatsapp::after {
-    content: "";
-    z-index: -1;
-    top: 100%;
-    height: 100%;
-    width: 100%;
-    left: 0;
-    position: absolute;
-    transition: 0.6s ease;
-    background-color: #00f100;
-}
-
-.isi-footer #whatsapp:hover::after {
-    top: 0;
-}
-
-.isi-footer #email::after {
-    content: "";
-    z-index: -1;
-    top: -100%;
-    height: 100%;
-    width: 100%;
-    left: 0;
-    position: absolute;
-    transition: 0.6s ease;
-    background-color: #0099ff;
-}
-
-.isi-footer #email:hover::after {
-    top: 0;
-}
-
-.isi-footer #maps::after {
-    content: "";
-    z-index: -1;
-    top: 100%;
-    height: 100%;
-    width: 100%;
-    left: 0;
-    position: absolute;
-    transition: 0.6s ease;
-    background-color: #ff0000;
-}
-
-.isi-footer #maps:hover::after {
-    top: 0;
 }
 
 .dev {
