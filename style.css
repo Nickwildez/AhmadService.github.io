@@ -802,7 +802,6 @@ header .nav-content {
     justify-content: center;
     align-items: center;
     text-shadow: 0 0 5px black;
-    box-shadow: 0 0 8px 1px black;
     background-color: #006eff;
     border: none;
     position: relative;

@@ -54,3 +54,12 @@ function removeCallDev() {
     const secCallDEV = document.querySelector('.sec-callDev');
     secCallDEV.classList.remove('opencallDEV');
 }
+
+document.getElementById("whatsapp").addEventListener('click', function (event) {
+    var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+    if (/android/i.test(userAgent) || (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream)) {
+        window.location.href = 'https://wa.me/6285774546860?text=Halo,%20saya%20menghubungi%20Anda%20dari%20situs%20web%20anda';
+        event.preventDefault();
+    }
+});
