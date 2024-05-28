@@ -150,7 +150,6 @@ header .nav-content {
 
 .nav-content a {
     color: white;
-    text-shadow: 0 0 5px white;
     font-size: 2rem;
     position: relative;
     width: 65px;
@@ -173,21 +172,7 @@ header .nav-content {
     transform: translateY(-30px);
     background-color: #081818;
     box-shadow: 0 0 8px 1px black;
-}
-
-.nav-content #home:hover,
-.nav-content #home.active {
-    color: #00ff00;
-}
-
-.nav-content #about:hover,
-.nav-content #about.active {
-    color: #fbff00;
-}
-
-.nav-content #pesan:hover,
-.nav-content #pesan.active {
-    color: #00aeff;
+    color: #00d9ff;
 }
 
 #callDev {
@@ -197,7 +182,6 @@ header .nav-content {
     text-align: center;
     position: relative;
     color: white;
-    text-shadow: 0 0 5px white;
     font-size: 2rem;
     width: 65px;
     height: 65px;
@@ -212,7 +196,7 @@ header .nav-content {
 }
 
 #callDev:hover {
-    color: red;
+    color: #00d9ff;
     transform: translateY(-30px);
     background-color: #081818;
     box-shadow: 0 0 8px 1px black;
@@ -346,7 +330,7 @@ header .nav-content {
     height: 65px;
     color: white;
     text-shadow: 0 0 5px white;
-    box-shadow: 0 0 8px 1px black;
+    box-shadow: 0 3px 5px 0 black;
     background-color: #00aeff;
     border-radius: 50%;
     font-size: 2.5rem;
@@ -360,7 +344,7 @@ header .nav-content {
 
 .a-callDev a:hover {
     transform: translateY(-10px);
-    transform: scale(1.1)
+    transform: scale(1.1);
 }
 
 .a-callDev #whatsapp::after {
@@ -495,8 +479,8 @@ header .nav-content {
     width: 100%;
     text-align: center;
     overflow: hidden;
-    animation: typing 5s infinite alternate,
-        cursor .5s step-end infinite alternate;
+    animation: typing 3s infinite alternate,
+        cursor .3s step-end infinite alternate;
 }
 
 @keyframes typing {
@@ -556,7 +540,6 @@ header .nav-content {
 }
 
 .button-to-down a:hover {
-    border: 3px solid black;
     box-shadow: 0 4px 8px 2px white;
 }
 
@@ -801,6 +784,7 @@ header .nav-content {
     display: flex;
     justify-content: center;
     align-items: center;
+    box-shadow: 0 3px 5px 0 black;
     text-shadow: 0 0 5px black;
     background-color: #006eff;
     border: none;
@@ -813,10 +797,14 @@ header .nav-content {
     font-size: 1.5rem;
     padding: 10px;
     width: 200px;
-    transition: .6s ease;
+    transition: .6s !important;
     outline: none !important;
     overflow: hidden;
     z-index: 1;
+}
+
+.box-content-card .btn a:hover{
+    border-radius: 30px;
 }
 
 .box-content-card .btn a::after {
