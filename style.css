@@ -133,7 +133,7 @@ header .nav-content {
     z-index: 1;
     overflow: hidden;
     text-shadow: 0 0 5px white;
-    box-shadow: 0 0 8px 1px black;
+    box-shadow: 0 0 7px 2px black;
     background-color: #081818;
     outline: none !important;
     cursor: pointer;
@@ -209,7 +209,7 @@ header .nav-content {
     display: block;
 }
 
-.wave-bawah{
+.wave-bawah {
     width: 100%;
     position: relative;
     background-color: transparent;
@@ -283,21 +283,22 @@ header .nav-content {
     text-align: center;
 }
 
-#closeCallDev{
+#closeCallDev {
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
     width: 45px;
     height: 45px;
-    left: 90%;
-    top: -120%;
+    left: 85%;
+    top: -130%;
     position: absolute;
     border: none;
     border-radius: 50%;
     color: white;
     background-color: red;
-    text-shadow: 0 0 5px white;
-    box-shadow: 0 0 8px 1px black;
+    text-shadow: 0 4px 5px white;
+    box-shadow: 0 5px 8px 1px black;
     font-size: 2rem;
 }
 
@@ -330,13 +331,12 @@ header .nav-content {
     height: 65px;
     color: white;
     text-shadow: 0 0 5px white;
-    box-shadow: 0 3px 5px 0 black;
+    box-shadow: 0 2px 5px 0 black;
     background-color: #00aeff;
     border-radius: 50%;
     font-size: 2.5rem;
     z-index: 1;
     position: relative;
-    border: 2px solid black;
     outline: none !important;
     overflow: hidden;
     transition: .6s ease;
@@ -345,6 +345,7 @@ header .nav-content {
 .a-callDev a:hover {
     transform: translateY(-10px);
     transform: scale(1.1);
+    box-shadow: 0 4px 8px 1px black;
 }
 
 .a-callDev #whatsapp::after {
@@ -527,8 +528,8 @@ header .nav-content {
     padding: 10px;
     font-size: 2rem;
     border: 3px solid #fbff00;
-    box-shadow: 0 4px 8px 2px black;
-    text-shadow: 0 0 8px black;
+    box-shadow: 0 3px 2px 2px black;
+    text-shadow: 0 4px 8px black;
     border-radius: 10px;
     text-align: center;
     color: #ffffff;
@@ -539,8 +540,9 @@ header .nav-content {
     transition: .6s ease !important;
 }
 
-.button-to-down a:hover {
-    box-shadow: 0 4px 8px 2px white;
+.button-to-down a:hover,
+.button-to-down a:focus {
+    box-shadow: 0 5px 8px 2px black;
 }
 
 .button-to-down a::after {
@@ -784,7 +786,7 @@ header .nav-content {
     display: flex;
     justify-content: center;
     align-items: center;
-    box-shadow: 0 3px 5px 0 black;
+    box-shadow: 0 1px 2px 0 black;
     text-shadow: 0 0 5px black;
     background-color: #006eff;
     border: none;
@@ -803,8 +805,9 @@ header .nav-content {
     z-index: 1;
 }
 
-.box-content-card .btn a:hover{
+.box-content-card .btn a:hover {
     border-radius: 30px;
+    box-shadow: 0 4px 8px 0 black;
 }
 
 .box-content-card .btn a::after {
@@ -901,34 +904,32 @@ footer.openContent {
 }
 
 .dev {
-    display: inline-block;
+    display: flex;
     width: 100%;
     text-align: center;
+    justify-content: center;
+    align-items: center;
     position: relative;
     padding: 10px;
 }
 
 .content-dev {
-    display: inline-block;
+    display: grid;
+    align-items: center;
+    justify-content: center;
     position: relative;
     text-align: center;
+    border: none;
+    width: 100%;
 }
 
-.dev p {
+.content-dev p {
     width: 100%;
     position: relative;
+    display: grid;
+    font-size: 1.4rem;
     font-weight: 500;
-    overflow: hidden;
-    font-size: 1.2rem;
-}
-
-.dev .namadev {
-    width: 100%;
-    position: relative;
-    border-right: 2px solid white;
-    font-weight: 500;
-    overflow: hidden;
-    white-space: nowrap;
-    font-size: 1.2rem;
-    animation: none;
+    align-items: center;
+    justify-content: center;
+    border: none;
 }
