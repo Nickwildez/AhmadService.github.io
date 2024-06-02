@@ -132,7 +132,6 @@ header .nav-content {
     text-align: center;
     z-index: 1;
     overflow: hidden;
-    text-shadow: 0 0 5px white;
     box-shadow: 0 0 7px 2px black;
     background-color: #081818;
     outline: none !important;
@@ -207,13 +206,14 @@ header .nav-content {
     position: relative;
     top: -20vh;
     display: block;
+    background-color: transparent;
 }
 
 .wave-bawah {
     width: 100%;
     position: relative;
     background-color: transparent;
-    top: 20vh;
+    top: 10vh;
     display: block;
 }
 
@@ -523,11 +523,10 @@ header .nav-content {
 }
 
 .button-to-down a {
-    background-color: transparent;
+    background-color: #006eff;
     width: 100%;
     padding: 10px;
     font-size: 2rem;
-    border: 3px solid #fbff00;
     box-shadow: 0 3px 2px 2px black;
     text-shadow: 0 4px 8px black;
     border-radius: 10px;
@@ -543,6 +542,7 @@ header .nav-content {
 .button-to-down a:hover,
 .button-to-down a:focus {
     box-shadow: 0 5px 8px 2px black;
+    border-radius: 25px;
 }
 
 .button-to-down a::after {
@@ -566,7 +566,7 @@ header .nav-content {
     justify-content: center;
     align-items: center;
     width: 100%;
-    min-height: 110vh;
+    min-height: 100vh;
     border: none;
     color: black;
     position: relative;
@@ -612,6 +612,7 @@ header .nav-content {
     width: 100%;
     position: relative;
     background-position: center;
+    object-fit: cover;
     background-size: cover;
     background-repeat: no-repeat;
     background: transparent;
@@ -622,7 +623,7 @@ header .nav-content {
     background: url(image/foto\ service.jpg);
     width: 100%;
     height: 100%;
-    min-height: 25vh;
+    min-height: 30vh;
     color: white;
     bottom: 0;
     padding: 5px;
@@ -697,6 +698,7 @@ header .nav-content {
 .card {
     display: none;
     align-items: center;
+    justify-content: center;
     width: 100%;
     min-height: 100vh;
     position: relative;
@@ -735,13 +737,17 @@ header .nav-content {
 
 .img-card {
     width: 100%;
+    display: grid;
     position: relative;
     border: none;
 }
 
 .img-card img {
     width: 100%;
+    height: 100%;
     border-radius: 10px 10px 0 0;
+    position: relative;
+    border: none;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -932,4 +938,92 @@ footer.openContent {
     align-items: center;
     justify-content: center;
     border: none;
+}
+
+@media (max-width: 1366px) {
+    header{
+        width: 100%;
+        justify-content: center;
+    }
+
+    header .nav-content{
+        width: 100%;
+        grid-template-columns: repeat(3,1fr);
+        gap: 50px;
+        padding: 10px;
+    }
+
+    .about {
+        width: 100%;
+        display: none;
+        position: relative;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 100px;
+    }
+
+    .about-content {
+        display: grid;
+        position: relative;
+        width: 100%;
+        border: none;
+        position: relative;
+    }
+
+    .box-image {
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        padding: 50px;
+    }
+
+    .box-image h2 {
+        background-image: url(image/foto\ service.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        object-fit: cover;
+        display: grid;
+        width: 100%;
+        height: 100%;
+        font-size: 3rem;
+        max-height: 30vh;
+    }
+
+    .logo-image {
+        padding: 20px;
+    }
+
+    .article-about-service h2,
+    p {
+        font-size: 2rem;
+    }
+
+    .card {
+        padding: 100px;
+        position: relative;
+        width: 100%;
+    }
+
+    .card-content {
+        gap: 80px;
+        width: 100%;
+        display: grid;
+        padding: 100px;
+    }
+
+    .img-card img {
+        width: 100%;
+        height: 100%;
+        max-height: 50vh;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    footer{
+        justify-content: center;
+    }
+
 }
